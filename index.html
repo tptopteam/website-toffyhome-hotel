@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toffyhome Hotel - Phetchabun</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/tailwind.config.js"></script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="font-thai bg-gray-50 text-gray-800">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-2">
+                    <img src="Images/LogoToffy home-04.png" alt="Toffyhome Hotel" class="h-12">
+                    <span class="text-xl font-semibold text-gray-800">Toffyhome Hotel</span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#home" class="text-sm font-medium hover:text-primary transition-colors">หน้าแรก</a>
+                    <a href="#facilities" class="text-sm font-medium hover:text-primary transition-colors">สิ่งอำนวยความสะดวก</a>
+                    <a href="#about" class="text-sm font-medium hover:text-primary transition-colors">เกี่ยวกับเรา</a>
+                    <a href="#location" class="text-sm font-medium hover:text-primary transition-colors">ที่ตั้ง</a>
+                    <a href="gallery.html" class="text-sm font-medium hover:text-primary transition-colors">แกลเลอรี่</a>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="flex items-center gap-3">
+                    <a href="https://live.ipms247.com/booking/book-rooms-toffyhomephetchabun" target="_blank" class="hidden sm:block bg-accent text-white px-5 py-2 rounded-lg font-medium hover:bg-amber-600 transition-colors">
+                        จองห้องพัก
+                    </a>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-btn" class="md:hidden p-2">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-4 py-3 space-y-2">
+                <a href="#home" class="block py-2 text-sm font-medium hover:text-primary">หน้าแรก</a>
+                <a href="#facilities" class="block py-2 text-sm font-medium hover:text-primary">สิ่งอำนวยความสะดวก</a>
+                <a href="#about" class="block py-2 text-sm font-medium hover:text-primary">เกี่ยวกับเรา</a>
+                <a href="#location" class="block py-2 text-sm font-medium hover:text-primary">ที่ตั้ง</a>
+                <a href="gallery.html" class="block py-2 text-sm font-medium hover:text-primary">แกลเลอรี่</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen min-h-[600px] flex items-center">
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('Images/TOFFYhome hotel-1.jpg');"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
+
+        <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="max-w-xl">
+                <div class="flex items-center gap-2 mb-4">
+                    <span class="bg-accent px-3 py-1 rounded-full text-white text-xs font-medium">ยอดนิยม</span>
+                    <div class="flex text-yellow-400">
+                        <span class="material-symbols-outlined text-sm">star</span>
+                        <span class="material-symbols-outlined text-sm">star</span>
+                        <span class="material-symbols-outlined text-sm">star</span>
+                        <span class="material-symbols-outlined text-sm">star</span>
+                        <span class="material-symbols-outlined text-sm">star</span>
+                    </div>
+                </div>
+
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4">
+                    พักผ่อนสบาย<br>ใจกลางเมือง<span class="text-primary">เพชรบูรณ์</span>
+                </h1>
+
+                <p class="text-white/90 text-lg mb-8 leading-relaxed">
+                    ห้องพักสะอาด ราคาคุ้มค่า พร้อมอาหารเช้า<br>
+                    ทำเลดี ใกล้แหล่งท่องเที่ยวและห้างสรรพสินค้า
+                </p>
+
+                <div class="flex flex-wrap gap-4">
+                    <a href="https://live.ipms247.com/booking/book-rooms-toffyhomephetchabun" target="_blank" class="bg-primary text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors">
+                        ตรวจสอบห้องว่าง
+                    </a>
+                    <a href="#contact" class="border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-gray-800 transition-colors">
+                        ติดต่อเรา
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities Section -->
+    <section id="facilities" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-12">
+                <span class="text-primary font-medium text-sm uppercase tracking-wider">สิ่งอำนวยความสะดวก</span>
+                <h2 class="text-3xl font-bold text-gray-800 mt-2">บริการของเรา</h2>
+                <div class="w-16 h-1 bg-accent mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 justify-center">
+                <!-- Facility Item -->
+                <div class="facility-card flex flex-col items-center p-6 rounded-xl bg-gray-50 hover:shadow-lg transition-all">
+                    <div class="w-14 h-14 flex items-center justify-center rounded-full bg-primary/10 text-primary mb-4">
+                        <span class="material-symbols-outlined text-2xl">wifi</span>
+                    </div>
+                    <h3 class="font-medium text-center">Wi-Fi ฟรี</h3>
+                </div>
+
+                <div class="facility-card flex flex-col items-center p-6 rounded-xl bg-gray-50 hover:shadow-lg transition-all">
+                    <div class="w-14 h-14 flex items-center justify-center rounded-full bg-primary/10 text-primary mb-4">
+                        <span class="material-symbols-outlined text-2xl">concierge</span>
+                    </div>
+                    <h3 class="font-medium text-center">บริการ 24 ชม.</h3>
+                </div>
+
+                <div class="facility-card flex flex-col items-center p-6 rounded-xl bg-gray-50 hover:shadow-lg transition-all">
+                    <div class="w-14 h-14 flex items-center justify-center rounded-full bg-primary/10 text-primary mb-4">
+                        <span class="material-symbols-outlined text-2xl">local_parking</span>
+                    </div>
+                    <h3 class="font-medium text-center">ที่จอดรถฟรี</h3>
+                </div>
+
+                <div class="facility-card flex flex-col items-center p-6 rounded-xl bg-gray-50 hover:shadow-lg transition-all">
+                    <div class="w-14 h-14 flex items-center justify-center rounded-full bg-primary/10 text-primary mb-4">
+                        <span class="material-symbols-outlined text-2xl">restaurant</span>
+                    </div>
+                    <h3 class="font-medium text-center">อาหารเช้า</h3>
+                </div>
+
+                <div class="facility-card flex flex-col items-center p-6 rounded-xl bg-gray-50 hover:shadow-lg transition-all">
+                    <div class="w-14 h-14 flex items-center justify-center rounded-full bg-primary/10 text-primary mb-4">
+                        <span class="material-symbols-outlined text-2xl">ac_unit</span>
+                    </div>
+                    <h3 class="font-medium text-center">แอร์ทุกห้อง</h3>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Images -->
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="aspect-[3/4] rounded-2xl overflow-hidden shadow-lg translate-y-6">
+                        <img src="Images/standard Double room-7.jpg"
+                             alt="ห้องพัก Standard Double"
+                             class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="aspect-[3/4] rounded-2xl overflow-hidden shadow-lg -translate-y-6">
+                        <img src="Images/standard Twinroom-1.jpg"
+                             alt="ห้องพัก Standard Twin"
+                             class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="aspect-[3/4] rounded-2xl overflow-hidden shadow-lg translate-y-6 col-start-1">
+                        <img src="Images/อื่นๆ/TOFFYhome hotel-5.jpg"
+                             alt="อาหารเช้า"
+                             class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="aspect-[3/4] rounded-2xl overflow-hidden shadow-lg -translate-y-6">
+                        <img src="Images/อื่นๆ/TOFFYhome hotel-4.jpg"
+                             alt="ภาพเพิ่มเติม"
+                             class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                </div>
+
+                <!-- Text Content -->
+                <div>
+                    <span class="text-primary font-medium text-sm uppercase tracking-wider">ยินดีต้อนรับ</span>
+                    <h2 class="text-3xl font-bold text-gray-800 mt-2 mb-6">
+                        ความสะดวกสบาย<br>ใจกลางเมือง
+                    </h2>
+
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        Toffyhome Hotel ตั้งอยู่ในทำเลที่สะดวกสบายใจกลางเมืองเพชรบูรณ์
+                        ผสมผสานความทันสมัยเข้ากับการต้อนรับแบบไทย ห้องพักสะอาด บริการดี ราคาคุ้มค่า
+                    </p>
+
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        ไม่ว่าคุณจะมาเพื่อธุรกิจหรือพักผ่อน ที่พักของเราอยู่ใกล้ตลาด วัด และแหล่งท่องเที่ยวธรรมชาติ
+                        มาสัมผัสประสบการณ์การพักผ่อนที่เหมือนอยู่บ้าน
+                    </p>
+
+                    <a href="gallery.html" class="inline-flex items-center gap-2 text-primary font-medium hover:underline">
+                        ดูรูปภาพเพิ่มเติม
+                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </a>
+
+                    <div class="grid grid-cols-2 gap-6 mt-8 pt-8 border-t">
+                        <div>
+                            <p class="text-3xl font-bold text-accent">200+</p>
+                            <p class="text-sm text-gray-500">แขกต่อเดือน</p>
+                        </div>
+                        <div>
+                            <p class="text-3xl font-bold text-accent">4.8</p>
+                            <p class="text-sm text-gray-500">คะแนนรีวิว</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 gap-4">
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-800">ที่ตั้งของเรา</h2>
+                    <p class="text-gray-600 mt-2">เดินทางสะดวก ใกล้แหล่งท่องเที่ยว</p>
+                </div>
+                <a href="https://maps.app.goo.gl/s3FSDTFAEKjH5t5E8" target="_blank"
+                   class="flex items-center gap-2 px-5 py-2.5 border border-gray-200 rounded-lg hover:border-primary hover:text-primary transition-colors">
+                    <span class="material-symbols-outlined">near_me</span>
+                    <span class="font-medium">นำทาง</span>
+                </a>
+            </div>
+
+            <div class="relative w-full h-[400px] rounded-2xl overflow-hidden shadow-lg bg-gray-100">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3827.052963913449!2d101.15264921102103!3d16.42213628424422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x312025537c15f1d1%3A0xa77029cea60dcff7!2z4LmC4Lij4LiH4LmB4Lij4Lih4LiX4LmK4Lit4Lif4Lif4Li14LmI4LmC4Liu4Lih!5e0!3m2!1sth!2sth!4v1768126542883!5m2!1sth!2sth"
+                    width="100%"
+                    height="100%"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    class="absolute inset-0">
+                </iframe>
+
+                <!-- Info Card -->
+                <div class="absolute bottom-4 left-4 right-4 md:left-6 md:right-auto bg-white/95 backdrop-blur p-4 rounded-xl shadow-lg max-w-sm z-10">
+                    <div class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-primary mt-1">pin_drop</span>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Toffyhome Hotel</h4>
+                            <p class="text-sm text-gray-600 mt-1">ถนนเพชรรัตน์ ต.ในเมือง อ.เมือง จ.เพชรบูรณ์ 67000</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-gray-50">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-10">คำถามที่พบบ่อย</h2>
+
+            <div class="space-y-4">
+                <details class="bg-white rounded-xl border overflow-hidden group">
+                    <summary class="flex justify-between items-center p-5 cursor-pointer">
+                        <span class="font-medium">เช็คอิน/เช็คเอาท์ เวลาเท่าไหร่?</span>
+                        <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+                    </summary>
+                    <div class="px-5 pb-5 text-gray-600 text-sm border-t pt-3">
+                        เช็คอิน ตั้งแต่ 14:00 น. / เช็คเอาท์ ก่อน 12:00 น.
+                        หากต้องการเช็คอินก่อนหรือเช็คเอาท์ช้า กรุณาแจ้งล่วงหน้า
+                    </div>
+                </details>
+
+                <details class="bg-white rounded-xl border overflow-hidden group">
+                    <summary class="flex justify-between items-center p-5 cursor-pointer">
+                        <span class="font-medium">รวมอาหารเช้าหรือไม่?</span>
+                        <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+                    </summary>
+                    <div class="px-5 pb-5 text-gray-600 text-sm border-t pt-3">
+                        รวมอาหารเช้าฟรีทุกวัน มีทั้งอาหารไทยและอาหารเช้าแบบสากล
+                    </div>
+                </details>
+
+                <details class="bg-white rounded-xl border overflow-hidden group">
+                    <summary class="flex justify-between items-center p-5 cursor-pointer">
+                        <span class="font-medium">มีที่จอดรถหรือไม่?</span>
+                        <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+                    </summary>
+                    <div class="px-5 pb-5 text-gray-600 text-sm border-t pt-3">
+                        มีที่จอดรถฟรีสำหรับแขกทุกท่าน ไม่ต้องจองล่วงหน้า
+                    </div>
+                </details>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="py-20 bg-primary">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">พร้อมจองห้องพักแล้วหรือยัง?</h2>
+            <p class="text-blue-100 text-lg mb-8">จองตรงกับเราเพื่อรับราคาดีที่สุด</p>
+
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="tel:0956255625" class="bg-accent text-white px-8 py-3 rounded-lg font-medium hover:bg-amber-600 transition-colors inline-flex items-center justify-center gap-2">
+                    <span class="material-symbols-outlined">call</span>
+                    โทรจองเลย
+                </a>
+                <a href="https://lin.ee/v7Zfqr0" target="_blank" class="inline-block"><img src="https://scdn.line-apps.com/n/line_add_friends/btn/th.png" alt="เพิ่มเพื่อน" class="h-12 w-auto rounded-lg"></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <!-- Brand -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center gap-2 mb-4">
+                        <img src="Images/LogoToffy home-04.png" alt="Toffyhome Hotel" class="h-16">
+                        <span class="text-xl font-semibold">Toffyhome Hotel</span>
+                    </div>
+                    <p class="text-gray-400 text-sm max-w-xs">
+                        พักสบาย เหมือนอยู่บ้าน ใจกลางเมืองเพชรบูรณ์
+                    </p>
+                </div>
+
+                <!-- Links -->
+                <div>
+                    <h3 class="font-semibold mb-4">ลิงก์</h3>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#home" class="hover:text-primary transition-colors">หน้าแรก</a></li>
+                        <li><a href="#facilities" class="hover:text-primary transition-colors">สิ่งอำนวยความสะดวก</a></li>
+                        <li><a href="#about" class="hover:text-primary transition-colors">เกี่ยวกับเรา</a></li>
+                        <li><a href="gallery.html" class="hover:text-primary transition-colors">แกลเลอรี่</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h3 class="font-semibold mb-4">ติดต่อ</h3>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary text-lg">call</span>
+                            095-625-5625
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary text-lg">mail</span>
+                            toffyhome49@gmail.com
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="material-symbols-outlined text-primary text-lg mt-0.5">location_on</span>
+                            เพชรบูรณ์, ประเทศไทย
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-gray-800 text-center text-sm text-gray-500">
+                <p>&copy; 2024 Toffyhome Hotel. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

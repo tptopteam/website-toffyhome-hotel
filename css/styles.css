@@ -1,0 +1,185 @@
+/* ===========================================
+   Toffyhome Hotel - Custom Styles
+   =========================================== */
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* Body base */
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Navigation transitions */
+nav a {
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #2563eb;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Facility cards hover effect */
+.facility-card {
+    transition: all 0.3s ease;
+}
+
+.facility-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.facility-card:hover .material-symbols-outlined {
+    transform: scale(1.1);
+}
+
+/* Gallery items */
+.gallery-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Filter buttons */
+.filter-btn {
+    transition: all 0.2s ease;
+}
+
+.filter-btn.active {
+    background-color: #1f2937;
+    color: white;
+    border-color: transparent;
+}
+
+/* Details/Summary FAQ styling */
+details summary::-webkit-details-marker {
+    display: none;
+}
+
+details[open] summary {
+    color: #2563eb;
+}
+
+/* Button hover effects */
+button, a[href] {
+    transition: all 0.2s ease;
+}
+
+/* Hero section animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#home .max-w-xl {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+/* Location pin bounce animation */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.animate-bounce {
+    animation: bounce 2s infinite;
+}
+
+/* Image hover zoom effect */
+.gallery-item img,
+section img {
+    transition: transform 0.5s ease;
+}
+
+/* Mobile menu animation */
+#mobile-menu {
+    transition: all 0.3s ease;
+}
+
+/* Focus styles for accessibility */
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid #2563eb;
+    outline-offset: 2px;
+}
+
+/* Selection color */
+::selection {
+    background-color: #2563eb;
+    color: white;
+}
+
+/* Loading state for images */
+img {
+    background-color: #f3f4f6;
+}
+
+/* Responsive typography adjustments */
+@media (max-width: 640px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Print styles */
+@media print {
+    nav,
+    footer,
+    #contact {
+        display: none;
+    }
+
+    body {
+        font-size: 12pt;
+    }
+}
+
