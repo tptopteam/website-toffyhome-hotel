@@ -72,138 +72,324 @@
             <p class="text-gray-600 text-lg">ชมภาพบรรยากาศภายในโรงแรมของเรา</p>
         </div>
 
-        <!-- Filter Chips -->
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 mb-8">
+        <!-- Filter Chips - Main Categories -->
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 mb-4">
             <div id="filter-buttons" class="flex flex-wrap gap-3">
-                <button class="filter-btn active px-5 py-2 rounded-full text-sm font-medium bg-gray-800 text-white" data-filter="all">ทั้งหมด</button>
-                <button class="filter-btn px-5 py-2 rounded-full text-sm font-medium bg-white border border-gray-200 hover:border-primary hover:text-primary transition-colors" data-filter="Family Triple Bed Room">Family Triple Bed Room</button>
-                <button class="filter-btn px-5 py-2 rounded-full text-sm font-medium bg-white border border-gray-200 hover:border-primary hover:text-primary transition-colors" data-filter="Single Bed Room">Single Bed Room</button>
-                <button class="filter-btn px-5 py-2 rounded-full text-sm font-medium bg-white border border-gray-200 hover:border-primary hover:text-primary transition-colors" data-filter="Standard Double Bed Room">Standard Double Bed Room</button>
-                <button class="filter-btn px-5 py-2 rounded-full text-sm font-medium bg-white border border-gray-200 hover:border-primary hover:text-primary transition-colors" data-filter="Standard Twin Bed Room">Standard Twin Bed Room</button>
-                <button class="filter-btn px-5 py-2 rounded-full text-sm font-medium bg-white border border-gray-200 hover:border-primary hover:text-primary transition-colors" data-filter="Suite Double Bed Room type A">Suite Double Bed Room type A</button>
-                <button class="filter-btn px-5 py-2 rounded-full text-sm font-medium bg-white border border-gray-200 hover:border-primary hover:text-primary transition-colors" data-filter="Suite Double Bed Room type B">Suite Double Bed Room type B</button>
-                <button class="filter-btn px-5 py-2 rounded-full text-sm font-medium bg-white border border-gray-200 hover:border-primary hover:text-primary transition-colors" data-filter="Superior Double Bed Room">Superior Double Bed Room</button>
-                <button class="filter-btn px-5 py-2 rounded-full text-sm font-medium bg-white border border-gray-200 hover:border-primary hover:text-primary transition-colors" data-filter="Superior Twin Bed Room">Superior Twin Bed Room</button>
+                <button class="filter-btn active px-5 py-2 rounded-full text-sm font-medium bg-gray-800 text-white" data-filter="all">All (ทั้งหมด)</button>
+                <button class="filter-btn px-5 py-2 rounded-full text-sm font-medium bg-white border border-gray-200 hover:border-primary hover:text-primary transition-colors" data-filter="rooms">Rooms (ห้องพัก)</button>
+                <button class="filter-btn px-5 py-2 rounded-full text-sm font-medium bg-white border border-gray-200 hover:border-primary hover:text-primary transition-colors" data-filter="breakfast">Breakfast / Dining (อาหารเช้า/ห้องอาหาร)</button>
+                <button class="filter-btn px-5 py-2 rounded-full text-sm font-medium bg-white border border-gray-200 hover:border-primary hover:text-primary transition-colors" data-filter="common-areas">Common Areas / Lobby (พื้นที่ส่วนกลาง/ล็อบบี้)</button>
+                <button class="filter-btn px-5 py-2 rounded-full text-sm font-medium bg-white border border-gray-200 hover:border-primary hover:text-primary transition-colors" data-filter="exterior">Exterior (ภายนอกโรงแรม)</button>
+                <button class="filter-btn px-5 py-2 rounded-full text-sm font-medium bg-white border border-gray-200 hover:border-primary hover:text-primary transition-colors" data-filter="ambience">Ambience (บรรยากาศ/มุมถ่ายรูป)</button>
+            </div>
+        </div>
+
+        <!-- Sub-filter for Room Types -->
+        <div id="room-subfilter" class="max-w-6xl mx-auto px-4 sm:px-6 mb-8 hidden">
+            <div class="flex flex-wrap gap-2 pl-4 border-l-4 border-primary">
+                <button class="subfilter-btn active px-4 py-1.5 rounded-full text-xs font-medium bg-primary text-white" data-subfilter="all-rooms">ทุกประเภท</button>
+                <button class="subfilter-btn px-4 py-1.5 rounded-full text-xs font-medium bg-gray-100 text-gray-600 hover:bg-primary/10 hover:text-primary transition-colors" data-subfilter="suite-a">Suite Type A</button>
+                <button class="subfilter-btn px-4 py-1.5 rounded-full text-xs font-medium bg-gray-100 text-gray-600 hover:bg-primary/10 hover:text-primary transition-colors" data-subfilter="suite-b">Suite Type B</button>
+                <button class="subfilter-btn px-4 py-1.5 rounded-full text-xs font-medium bg-gray-100 text-gray-600 hover:bg-primary/10 hover:text-primary transition-colors" data-subfilter="standard-double">Standard Double</button>
+                <button class="subfilter-btn px-4 py-1.5 rounded-full text-xs font-medium bg-gray-100 text-gray-600 hover:bg-primary/10 hover:text-primary transition-colors" data-subfilter="standard-twin">Standard Twin</button>
+                <button class="subfilter-btn px-4 py-1.5 rounded-full text-xs font-medium bg-gray-100 text-gray-600 hover:bg-primary/10 hover:text-primary transition-colors" data-subfilter="family-triple">Family Triple</button>
+                <button class="subfilter-btn px-4 py-1.5 rounded-full text-xs font-medium bg-gray-100 text-gray-600 hover:bg-primary/10 hover:text-primary transition-colors" data-subfilter="superior-double">Superior Double</button>
+                <button class="subfilter-btn px-4 py-1.5 rounded-full text-xs font-medium bg-gray-100 text-gray-600 hover:bg-primary/10 hover:text-primary transition-colors" data-subfilter="superior-twin">Superior Twin</button>
+                <button class="subfilter-btn px-4 py-1.5 rounded-full text-xs font-medium bg-gray-100 text-gray-600 hover:bg-primary/10 hover:text-primary transition-colors" data-subfilter="single">Single</button>
             </div>
         </div>
 
         <!-- Gallery Grid -->
         <div class="max-w-6xl mx-auto px-4 sm:px-6">
             <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Family Triple Bed Room -->
-                <div class="gallery-item group relative rounded-xl overflow-hidden bg-gray-200 aspect-[4/3] cursor-pointer" data-category="Family Triple Bed Room">
-                    <img src="Images/รูปแยกประเภท/ห้อง/Family Triple Bed Room/toffyhome-family-triple-01.jpg" alt="Family Triple Bed Room" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+
+                <!-- Family Triple Bed Room (7 images) -->
+                <div class="gallery-item group relative rounded-xl overflow-hidden bg-gray-200 aspect-[4/3] cursor-pointer" data-category="rooms" data-subcategory="family-triple">
+                    <img src="Images/room/toffyhome-family-triple/toffyhome-family-triple-001.jpg" alt="Family Triple Bed Room" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
                         <span class="material-symbols-outlined text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity">zoom_in</span>
                     </div>
                 </div>
-                <div class="gallery-item group relative rounded-xl overflow-hidden bg-gray-200 aspect-[4/3] cursor-pointer" data-category="Family Triple Bed Room">
-                    <img src="Images/รูปแยกประเภท/ห้อง/Family Triple Bed Room/toffyhome-family-triple-02.jpg" alt="Family Triple Bed Room" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="gallery-item group relative rounded-xl overflow-hidden bg-gray-200 aspect-[4/3] cursor-pointer" data-category="rooms" data-subcategory="family-triple">
+                    <img src="Images/room/toffyhome-family-triple/toffyhome-family-triple-002.jpg" alt="Family Triple Bed Room" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity">zoom_in</span>
+                    </div>
+                </div>
+                <div class="gallery-item group relative rounded-xl overflow-hidden bg-gray-200 aspect-[4/3] cursor-pointer" data-category="rooms" data-subcategory="family-triple">
+                    <img src="Images/room/toffyhome-family-triple/toffyhome-family-triple-003.jpg" alt="Family Triple Bed Room" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity">zoom_in</span>
+                    </div>
+                </div>
+                <div class="gallery-item group relative rounded-xl overflow-hidden bg-gray-200 aspect-[4/3] cursor-pointer" data-category="rooms" data-subcategory="family-triple">
+                    <img src="Images/room/toffyhome-family-triple/toffyhome-family-triple-004.jpg" alt="Family Triple Bed Room" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity">zoom_in</span>
+                    </div>
+                </div>
+                <div class="gallery-item group relative rounded-xl overflow-hidden bg-gray-200 aspect-[4/3] cursor-pointer" data-category="rooms" data-subcategory="family-triple">
+                    <img src="Images/room/toffyhome-family-triple/toffyhome-family-triple-005.jpg" alt="Family Triple Bed Room" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity">zoom_in</span>
+                    </div>
+                </div>
+                <div class="gallery-item group relative rounded-xl overflow-hidden bg-gray-200 aspect-[4/3] cursor-pointer" data-category="rooms" data-subcategory="family-triple">
+                    <img src="Images/room/toffyhome-family-triple/toffyhome-family-triple-006.jpg" alt="Family Triple Bed Room" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity">zoom_in</span>
+                    </div>
+                </div>
+                <div class="gallery-item group relative rounded-xl overflow-hidden bg-gray-200 aspect-[4/3] cursor-pointer" data-category="rooms" data-subcategory="family-triple">
+                    <img src="Images/room/toffyhome-family-triple/toffyhome-family-triple-007.jpg" alt="Family Triple Bed Room" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
                         <span class="material-symbols-outlined text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity">zoom_in</span>
                     </div>
                 </div>
 
-
-                <!-- Single Bed Room -->
-                <div class="gallery-item group relative rounded-xl overflow-hidden bg-gray-200 aspect-[4/3] cursor-pointer" data-category="Single Bed Room">
-                    <img src="Images/รูปแยกประเภท/ห้อง/Single Bed Room/toffyhome-single-01.jpg" alt="Single Bed Room" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <!-- Single Bed Room (5 images) -->
+                <div class="gallery-item group relative rounded-xl overflow-hidden bg-gray-200 aspect-[4/3] cursor-pointer" data-category="rooms" data-subcategory="single">
+                    <img src="Images/room/toffyhome-single/toffyhome-single-001.jpg" alt="Single Bed Room" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
                         <span class="material-symbols-outlined text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity">zoom_in</span>
                     </div>
                 </div>
-                <div class="gallery-item group relative rounded-xl overflow-hidden bg-gray-200 aspect-[4/3] cursor-pointer" data-category="Single Bed Room">
-                    <img src="Images/รูปแยกประเภท/ห้อง/Single Bed Room/toffyhome-single-02.jpg" alt="Single Bed Room" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="gallery-item group relative rounded-xl overflow-hidden bg-gray-200 aspect-[4/3] cursor-pointer" data-category="rooms" data-subcategory="single">
+                    <img src="Images/room/toffyhome-single/toffyhome-single-002.jpg" alt="Single Bed Room" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
                         <span class="material-symbols-outlined text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity">zoom_in</span>
                     </div>
                 </div>
-
-                
-                <!-- Standard Double Bed Room -->
-                <div class="gallery-item group relative rounded-xl overflow-hidden bg-gray-200 aspect-[4/3] cursor-pointer" data-category="Standard Double Bed Room">
-                    <img src="Images/รูปแยกประเภท/ห้อง/Standard Double Bed Room/toffyhome-standard-double-01.jpg" alt="Standard Double Bed Room" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="gallery-item group relative rounded-xl overflow-hidden bg-gray-200 aspect-[4/3] cursor-pointer" data-category="rooms" data-subcategory="single">
+                    <img src="Images/room/toffyhome-single/toffyhome-single-003.jpg" alt="Single Bed Room" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
                         <span class="material-symbols-outlined text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity">zoom_in</span>
                     </div>
                 </div>
-                <div class="gallery-item group relative rounded-xl overflow-hidden bg-gray-200 aspect-[4/3] cursor-pointer" data-category="Standard Double Bed Room">
-                    <img src="Images/รูปแยกประเภท/ห้อง/Standard Double Bed Room/toffyhome-standard-double-02.jpg" alt="Standard Double Bed Room" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="gallery-item group relative rounded-xl overflow-hidden bg-gray-200 aspect-[4/3] cursor-pointer" data-category="rooms" data-subcategory="single">
+                    <img src="Images/room/toffyhome-single/toffyhome-single-004.jpg" alt="Single Bed Room" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
                         <span class="material-symbols-outlined text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity">zoom_in</span>
                     </div>
                 </div>
-
-
-                <!-- Standard Twin Bed Room -->
-                <div class="gallery-item group relative rounded-xl overflow-hidden bg-gray-200 aspect-[4/3] cursor-pointer" data-category="Standard Twin Bed Room">
-                    <img src="Images/รูปแยกประเภท/ห้อง/Standard Twin Bed Room/toffyhome-standard-twin-01.jpg" alt="Standard Twin Bed Room" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
-                        <span class="material-symbols-outlined text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity">zoom_in</span>
-                    </div>
-                </div>
-                <div class="gallery-item group relative rounded-xl overflow-hidden bg-gray-200 aspect-[4/3] cursor-pointer" data-category="Standard Twin Bed Room">
-                    <img src="Images/รูปแยกประเภท/ห้อง/Standard Twin Bed Room/toffyhome-standard-twin-02.jpg" alt="Standard Twin Bed Room" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="gallery-item group relative rounded-xl overflow-hidden bg-gray-200 aspect-[4/3] cursor-pointer" data-category="rooms" data-subcategory="single">
+                    <img src="Images/room/toffyhome-single/toffyhome-single-005.jpg" alt="Single Bed Room" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
                         <span class="material-symbols-outlined text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity">zoom_in</span>
                     </div>
                 </div>
 
-                
-                <!-- Suite Double Bed Room type A -->
-                <div class="gallery-item group relative rounded-xl overflow-hidden bg-gray-200 aspect-[4/3] cursor-pointer" data-category="Suite Double Bed Room type A">
-                    <img src="Images/รูปแยกประเภท/ห้อง/Suite Double Bed Room type A/LINE_ALBUM_Suite Type A_250516_1.jpg" alt="Suite Double Bed Room type A" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <!-- Standard Double Bed Room (10 images) -->
+                <div class="gallery-item group relative rounded-xl overflow-hidden bg-gray-200 aspect-[4/3] cursor-pointer" data-category="rooms" data-subcategory="standard-double">
+                    <img src="Images/room/toffyhome-standard-double/toffyhome-standard-double-001.jpg" alt="Standard Double Bed Room" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
                         <span class="material-symbols-outlined text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity">zoom_in</span>
                     </div>
                 </div>
-                <div class="gallery-item group relative rounded-xl overflow-hidden bg-gray-200 aspect-[4/3] cursor-pointer" data-category="Suite Double Bed Room type A">
-                    <img src="Images/รูปแยกประเภท/ห้อง/Suite Double Bed Room type A/LINE_ALBUM_Suite Type A_250516_2.jpg" alt="Suite Double Bed Room type A" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="gallery-item group relative rounded-xl overflow-hidden bg-gray-200 aspect-[4/3] cursor-pointer" data-category="rooms" data-subcategory="standard-double">
+                    <img src="Images/room/toffyhome-standard-double/toffyhome-standard-double-002.jpg" alt="Standard Double Bed Room" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity">zoom_in</span>
+                    </div>
+                </div>
+                <div class="gallery-item group relative rounded-xl overflow-hidden bg-gray-200 aspect-[4/3] cursor-pointer" data-category="rooms" data-subcategory="standard-double">
+                    <img src="Images/room/toffyhome-standard-double/toffyhome-standard-double-003.jpg" alt="Standard Double Bed Room" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity">zoom_in</span>
+                    </div>
+                </div>
+                <div class="gallery-item group relative rounded-xl overflow-hidden bg-gray-200 aspect-[4/3] cursor-pointer" data-category="rooms" data-subcategory="standard-double">
+                    <img src="Images/room/toffyhome-standard-double/toffyhome-standard-double-004.jpg" alt="Standard Double Bed Room" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity">zoom_in</span>
+                    </div>
+                </div>
+                <div class="gallery-item group relative rounded-xl overflow-hidden bg-gray-200 aspect-[4/3] cursor-pointer" data-category="rooms" data-subcategory="standard-double">
+                    <img src="Images/room/toffyhome-standard-double/toffyhome-standard-double-005.jpg" alt="Standard Double Bed Room" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity">zoom_in</span>
+                    </div>
+                </div>
+                <div class="gallery-item group relative rounded-xl overflow-hidden bg-gray-200 aspect-[4/3] cursor-pointer" data-category="rooms" data-subcategory="standard-double">
+                    <img src="Images/room/toffyhome-standard-double/toffyhome-standard-double-006.jpg" alt="Standard Double Bed Room" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity">zoom_in</span>
+                    </div>
+                </div>
+                <div class="gallery-item group relative rounded-xl overflow-hidden bg-gray-200 aspect-[4/3] cursor-pointer" data-category="rooms" data-subcategory="standard-double">
+                    <img src="Images/room/toffyhome-standard-double/toffyhome-standard-double-007.jpg" alt="Standard Double Bed Room" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity">zoom_in</span>
+                    </div>
+                </div>
+                <div class="gallery-item group relative rounded-xl overflow-hidden bg-gray-200 aspect-[4/3] cursor-pointer" data-category="rooms" data-subcategory="standard-double">
+                    <img src="Images/room/toffyhome-standard-double/toffyhome-standard-double-008.jpg" alt="Standard Double Bed Room" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity">zoom_in</span>
+                    </div>
+                </div>
+                <div class="gallery-item group relative rounded-xl overflow-hidden bg-gray-200 aspect-[4/3] cursor-pointer" data-category="rooms" data-subcategory="standard-double">
+                    <img src="Images/room/toffyhome-standard-double/toffyhome-standard-double-009.jpg" alt="Standard Double Bed Room" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity">zoom_in</span>
+                    </div>
+                </div>
+                <div class="gallery-item group relative rounded-xl overflow-hidden bg-gray-200 aspect-[4/3] cursor-pointer" data-category="rooms" data-subcategory="standard-double">
+                    <img src="Images/room/toffyhome-standard-double/toffyhome-standard-double-010.jpg" alt="Standard Double Bed Room" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
                         <span class="material-symbols-outlined text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity">zoom_in</span>
                     </div>
                 </div>
 
+                <!-- Standard Twin Bed Room (5 images) -->
+                <div class="gallery-item group relative rounded-xl overflow-hidden bg-gray-200 aspect-[4/3] cursor-pointer" data-category="rooms" data-subcategory="standard-twin">
+                    <img src="Images/room/toffyhome-standard-twin/toffyhome-standard-twin-001.jpg" alt="Standard Twin Bed Room" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity">zoom_in</span>
+                    </div>
+                </div>
+                <div class="gallery-item group relative rounded-xl overflow-hidden bg-gray-200 aspect-[4/3] cursor-pointer" data-category="rooms" data-subcategory="standard-twin">
+                    <img src="Images/room/toffyhome-standard-twin/toffyhome-standard-twin-002.jpg" alt="Standard Twin Bed Room" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity">zoom_in</span>
+                    </div>
+                </div>
+                <div class="gallery-item group relative rounded-xl overflow-hidden bg-gray-200 aspect-[4/3] cursor-pointer" data-category="rooms" data-subcategory="standard-twin">
+                    <img src="Images/room/toffyhome-standard-twin/toffyhome-standard-twin-003.jpg" alt="Standard Twin Bed Room" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity">zoom_in</span>
+                    </div>
+                </div>
+                <div class="gallery-item group relative rounded-xl overflow-hidden bg-gray-200 aspect-[4/3] cursor-pointer" data-category="rooms" data-subcategory="standard-twin">
+                    <img src="Images/room/toffyhome-standard-twin/toffyhome-standard-twin-004.jpg" alt="Standard Twin Bed Room" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity">zoom_in</span>
+                    </div>
+                </div>
+                <div class="gallery-item group relative rounded-xl overflow-hidden bg-gray-200 aspect-[4/3] cursor-pointer" data-category="rooms" data-subcategory="standard-twin">
+                    <img src="Images/room/toffyhome-standard-twin/toffyhome-standard-twin-005.jpg" alt="Standard Twin Bed Room" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity">zoom_in</span>
+                    </div>
+                </div>
 
-                <!-- Suite Double Bed Room type B -->
-                <div class="gallery-item group relative rounded-xl overflow-hidden bg-gray-200 aspect-[4/3] cursor-pointer" data-category="Suite Double Bed Room type B">
-                    <img src="Images/รูปแยกประเภท/ห้อง/Suite Double Bed Room type B/LINE_ALBUM_Suite Type B_250516_1.jpg" alt="Suite Double Bed Room type B" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <!-- Suite Double Bed Room type A (5 images) -->
+                <div class="gallery-item group relative rounded-xl overflow-hidden bg-gray-200 aspect-[4/3] cursor-pointer" data-category="rooms" data-subcategory="suite-a">
+                    <img src="Images/room/toffyhome-suite-double-a/toffyhome-suite-a-01.jpg" alt="Suite Double Bed Room type A" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
                         <span class="material-symbols-outlined text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity">zoom_in</span>
                     </div>
                 </div>
-                <div class="gallery-item group relative rounded-xl overflow-hidden bg-gray-200 aspect-[4/3] cursor-pointer" data-category="Suite Double Bed Room type B">
-                    <img src="Images/รูปแยกประเภท/ห้อง/Suite Double Bed Room type B/LINE_ALBUM_Suite Type B_250516_2.jpg" alt="Suite Double Bed Room type B" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="gallery-item group relative rounded-xl overflow-hidden bg-gray-200 aspect-[4/3] cursor-pointer" data-category="rooms" data-subcategory="suite-a">
+                    <img src="Images/room/toffyhome-suite-double-a/toffyhome-suite-a-02.jpg" alt="Suite Double Bed Room type A" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity">zoom_in</span>
+                    </div>
+                </div>
+                <div class="gallery-item group relative rounded-xl overflow-hidden bg-gray-200 aspect-[4/3] cursor-pointer" data-category="rooms" data-subcategory="suite-a">
+                    <img src="Images/room/toffyhome-suite-double-a/toffyhome-suite-a-03.jpg" alt="Suite Double Bed Room type A" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity">zoom_in</span>
+                    </div>
+                </div>
+                <div class="gallery-item group relative rounded-xl overflow-hidden bg-gray-200 aspect-[4/3] cursor-pointer" data-category="rooms" data-subcategory="suite-a">
+                    <img src="Images/room/toffyhome-suite-double-a/toffyhome-suite-a-04.jpg" alt="Suite Double Bed Room type A" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity">zoom_in</span>
+                    </div>
+                </div>
+                <div class="gallery-item group relative rounded-xl overflow-hidden bg-gray-200 aspect-[4/3] cursor-pointer" data-category="rooms" data-subcategory="suite-a">
+                    <img src="Images/room/toffyhome-suite-double-a/toffyhome-suite-a-05.jpg" alt="Suite Double Bed Room type A" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
                         <span class="material-symbols-outlined text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity">zoom_in</span>
                     </div>
                 </div>
 
+                <!-- Suite Double Bed Room type B (7 images) -->
+                <div class="gallery-item group relative rounded-xl overflow-hidden bg-gray-200 aspect-[4/3] cursor-pointer" data-category="rooms" data-subcategory="suite-b">
+                    <img src="Images/room/toffyhome-suite-double-b/toffyhome-suite-b-01.jpg" alt="Suite Double Bed Room type B" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity">zoom_in</span>
+                    </div>
+                </div>
+                <div class="gallery-item group relative rounded-xl overflow-hidden bg-gray-200 aspect-[4/3] cursor-pointer" data-category="rooms" data-subcategory="suite-b">
+                    <img src="Images/room/toffyhome-suite-double-b/toffyhome-suite-b-02.jpg" alt="Suite Double Bed Room type B" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity">zoom_in</span>
+                    </div>
+                </div>
+                <div class="gallery-item group relative rounded-xl overflow-hidden bg-gray-200 aspect-[4/3] cursor-pointer" data-category="rooms" data-subcategory="suite-b">
+                    <img src="Images/room/toffyhome-suite-double-b/toffyhome-suite-b-03.jpg" alt="Suite Double Bed Room type B" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity">zoom_in</span>
+                    </div>
+                </div>
+                <div class="gallery-item group relative rounded-xl overflow-hidden bg-gray-200 aspect-[4/3] cursor-pointer" data-category="rooms" data-subcategory="suite-b">
+                    <img src="Images/room/toffyhome-suite-double-b/toffyhome-suite-b-04.jpg" alt="Suite Double Bed Room type B" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity">zoom_in</span>
+                    </div>
+                </div>
+                <div class="gallery-item group relative rounded-xl overflow-hidden bg-gray-200 aspect-[4/3] cursor-pointer" data-category="rooms" data-subcategory="suite-b">
+                    <img src="Images/room/toffyhome-suite-double-b/toffyhome-suite-b-05.jpg" alt="Suite Double Bed Room type B" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity">zoom_in</span>
+                    </div>
+                </div>
+                <div class="gallery-item group relative rounded-xl overflow-hidden bg-gray-200 aspect-[4/3] cursor-pointer" data-category="rooms" data-subcategory="suite-b">
+                    <img src="Images/room/toffyhome-suite-double-b/toffyhome-suite-b-06.jpg" alt="Suite Double Bed Room type B" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity">zoom_in</span>
+                    </div>
+                </div>
+                <div class="gallery-item group relative rounded-xl overflow-hidden bg-gray-200 aspect-[4/3] cursor-pointer" data-category="rooms" data-subcategory="suite-b">
+                    <img src="Images/room/toffyhome-suite-double-b/toffyhome-suite-b-07.jpg" alt="Suite Double Bed Room type B" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity">zoom_in</span>
+                    </div>
+                </div>
 
-                <!-- Superior Double Bed Room -->
-                <div class="gallery-item group relative rounded-xl overflow-hidden bg-gray-200 aspect-[4/3] cursor-pointer" data-category="Superior Double Bed Room">
-                    <img src="Images/รูปแยกประเภท/ห้อง/Superior Double Bed Room/toffyhome-superior-double-01.jpg" alt="Superior Double Bed Room" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <!-- Superior Double Bed Room (4 images) -->
+                <div class="gallery-item group relative rounded-xl overflow-hidden bg-gray-200 aspect-[4/3] cursor-pointer" data-category="rooms" data-subcategory="superior-double">
+                    <img src="Images/room/toffyhome-superior-double/toffyhome-superior-double-001.jpg" alt="Superior Double Bed Room" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
                         <span class="material-symbols-outlined text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity">zoom_in</span>
                     </div>
                 </div>
-                <div class="gallery-item group relative rounded-xl overflow-hidden bg-gray-200 aspect-[4/3] cursor-pointer" data-category="Superior Double Bed Room">
-                    <img src="Images/รูปแยกประเภท/ห้อง/Superior Double Bed Room/toffyhome-superior-double-02.jpg" alt="Superior Double Bed Room" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="gallery-item group relative rounded-xl overflow-hidden bg-gray-200 aspect-[4/3] cursor-pointer" data-category="rooms" data-subcategory="superior-double">
+                    <img src="Images/room/toffyhome-superior-double/toffyhome-superior-double-002.jpg" alt="Superior Double Bed Room" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity">zoom_in</span>
+                    </div>
+                </div>
+                <div class="gallery-item group relative rounded-xl overflow-hidden bg-gray-200 aspect-[4/3] cursor-pointer" data-category="rooms" data-subcategory="superior-double">
+                    <img src="Images/room/toffyhome-superior-double/toffyhome-superior-double-003.jpg" alt="Superior Double Bed Room" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity">zoom_in</span>
+                    </div>
+                </div>
+                <div class="gallery-item group relative rounded-xl overflow-hidden bg-gray-200 aspect-[4/3] cursor-pointer" data-category="rooms" data-subcategory="superior-double">
+                    <img src="Images/room/toffyhome-superior-double/toffyhome-superior-double-04.jpg" alt="Superior Double Bed Room" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
                         <span class="material-symbols-outlined text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity">zoom_in</span>
                     </div>
                 </div>
 
-                
-                <!-- Superior Twin Bed Room -->
-                <div class="gallery-item group relative rounded-xl overflow-hidden bg-gray-200 aspect-[4/3] cursor-pointer" data-category="Superior Twin Bed Room">
-                    <img src="Images/รูปแยกประเภท/ห้อง/Superior Twin Bed Room/toffyhome-superior-twin-01.jpg" alt="Superior Twin Bed Room" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <!-- Superior Twin Bed Room (3 images) -->
+                <div class="gallery-item group relative rounded-xl overflow-hidden bg-gray-200 aspect-[4/3] cursor-pointer" data-category="rooms" data-subcategory="superior-twin">
+                    <img src="Images/room/toffyhome-superior-twin/toffyhome-superior-twin-001.jpg" alt="Superior Twin Bed Room" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
                         <span class="material-symbols-outlined text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity">zoom_in</span>
                     </div>
                 </div>
-                <div class="gallery-item group relative rounded-xl overflow-hidden bg-gray-200 aspect-[4/3] cursor-pointer" data-category="Superior Twin Bed Room">
-                    <img src="Images/รูปแยกประเภท/ห้อง/Superior Twin Bed Room/toffyhome-superior-twin-02.jpg" alt="Superior Twin Bed Room" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="gallery-item group relative rounded-xl overflow-hidden bg-gray-200 aspect-[4/3] cursor-pointer" data-category="rooms" data-subcategory="superior-twin">
+                    <img src="Images/room/toffyhome-superior-twin/toffyhome-superior-twin-002.jpg" alt="Superior Twin Bed Room" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity">zoom_in</span>
+                    </div>
+                </div>
+                <div class="gallery-item group relative rounded-xl overflow-hidden bg-gray-200 aspect-[4/3] cursor-pointer" data-category="rooms" data-subcategory="superior-twin">
+                    <img src="Images/room/toffyhome-superior-twin/toffyhome-superior-twin-003.jpg" alt="Superior Twin Bed Room" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-center justify-center">
                         <span class="material-symbols-outlined text-white text-4xl opacity-0 group-hover:opacity-100 transition-opacity">zoom_in</span>
                     </div>
@@ -285,23 +471,78 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const filterButtons = document.querySelectorAll('#filter-buttons .filter-btn');
+            const subfilterButtons = document.querySelectorAll('#room-subfilter .subfilter-btn');
+            const roomSubfilter = document.getElementById('room-subfilter');
             const galleryItems = document.querySelectorAll('#gallery-grid .gallery-item');
 
+            let currentMainFilter = 'all';
+            let currentSubFilter = 'all-rooms';
+
+            // Main filter function
+            function applyFilters() {
+                galleryItems.forEach(item => {
+                    const category = item.dataset.category;
+                    const subcategory = item.dataset.subcategory;
+
+                    let showItem = false;
+
+                    if (currentMainFilter === 'all') {
+                        showItem = true;
+                    } else if (currentMainFilter === 'rooms') {
+                        if (currentSubFilter === 'all-rooms') {
+                            showItem = category === 'rooms';
+                        } else {
+                            showItem = category === 'rooms' && subcategory === currentSubFilter;
+                        }
+                    } else {
+                        showItem = category === currentMainFilter;
+                    }
+
+                    item.style.display = showItem ? 'block' : 'none';
+                });
+            }
+
+            // Main filter buttons
             filterButtons.forEach(button => {
                 button.addEventListener('click', () => {
                     // Set active button
                     filterButtons.forEach(btn => btn.classList.remove('active', 'bg-gray-800', 'text-white'));
                     button.classList.add('active', 'bg-gray-800', 'text-white');
 
-                    const filter = button.dataset.filter;
+                    currentMainFilter = button.dataset.filter;
 
-                    galleryItems.forEach(item => {
-                        if (filter === 'all' || item.dataset.category === filter) {
-                            item.style.display = 'block';
-                        } else {
-                            item.style.display = 'none';
-                        }
+                    // Show/hide room subfilter
+                    if (currentMainFilter === 'rooms') {
+                        roomSubfilter.classList.remove('hidden');
+                    } else {
+                        roomSubfilter.classList.add('hidden');
+                        currentSubFilter = 'all-rooms';
+                        // Reset subfilter buttons
+                        subfilterButtons.forEach(btn => {
+                            btn.classList.remove('active', 'bg-primary', 'text-white');
+                            btn.classList.add('bg-gray-100', 'text-gray-600');
+                        });
+                        subfilterButtons[0].classList.add('active', 'bg-primary', 'text-white');
+                        subfilterButtons[0].classList.remove('bg-gray-100', 'text-gray-600');
+                    }
+
+                    applyFilters();
+                });
+            });
+
+            // Subfilter buttons
+            subfilterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Set active button
+                    subfilterButtons.forEach(btn => {
+                        btn.classList.remove('active', 'bg-primary', 'text-white');
+                        btn.classList.add('bg-gray-100', 'text-gray-600');
                     });
+                    button.classList.add('active', 'bg-primary', 'text-white');
+                    button.classList.remove('bg-gray-100', 'text-gray-600');
+
+                    currentSubFilter = button.dataset.subfilter;
+                    applyFilters();
                 });
             });
         });
